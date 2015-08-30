@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500147F01B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F31B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F41B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F61B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F91B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; settings = {ASSET_TAGS = (); }; };
+		500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; settings = {ASSET_TAGS = (); }; };
+		500147FC1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		50073F9B1B844EC10082BCC3 /* SquarePants.h in Headers */ = {isa = PBXBuildFile; fileRef = 50073F9A1B844EC10082BCC3 /* SquarePants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50073FA21B844EC10082BCC3 /* SquarePants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50073F971B844EC10082BCC3 /* SquarePants.framework */; };
 		50073FA71B844EC10082BCC3 /* SquarePantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FA61B844EC10082BCC3 /* SquarePantsTests.swift */; };
+		50073FB21B844EED0082BCC3 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FB11B844EEC0082BCC3 /* Layoutable.swift */; };
+		50073FB31B844EED0082BCC3 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FB11B844EEC0082BCC3 /* Layoutable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500147EF1B902CE7007D2F1F /* LazyProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyProperty.swift; sourceTree = "<group>"; };
+		500147F21B902D2A007D2F1F /* PropertySetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySetter.swift; sourceTree = "<group>"; };
+		500147F51B902DBB007D2F1F /* LayoutMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMaker.swift; sourceTree = "<group>"; };
+		500147F81B902DFC007D2F1F /* LayoutRelationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutRelationship.swift; sourceTree = "<group>"; };
+		500147FB1B902E53007D2F1F /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		50073F971B844EC10082BCC3 /* SquarePants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SquarePants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50073F9A1B844EC10082BCC3 /* SquarePants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquarePants.h; sourceTree = "<group>"; };
 		50073F9C1B844EC10082BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50073FA11B844EC10082BCC3 /* SquarePantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquarePantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50073FA61B844EC10082BCC3 /* SquarePantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquarePantsTests.swift; sourceTree = "<group>"; };
 		50073FA81B844EC10082BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50073FB11B844EEC0082BCC3 /* Layoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,12 @@
 			children = (
 				50073F9A1B844EC10082BCC3 /* SquarePants.h */,
 				50073F9C1B844EC10082BCC3 /* Info.plist */,
+				50073FB11B844EEC0082BCC3 /* Layoutable.swift */,
+				500147EF1B902CE7007D2F1F /* LazyProperty.swift */,
+				500147F21B902D2A007D2F1F /* PropertySetter.swift */,
+				500147F51B902DBB007D2F1F /* LayoutMaker.swift */,
+				500147F81B902DFC007D2F1F /* LayoutRelationship.swift */,
+				500147FB1B902E53007D2F1F /* UIViewExtensions.swift */,
 			);
 			path = SquarePants;
 			sourceTree = "<group>";
@@ -142,6 +166,7 @@
 		50073F8E1B844EC10082BCC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Peakon;
 				TargetAttributes = {
@@ -193,6 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500147F31B902D2A007D2F1F /* PropertySetter.swift in Sources */,
+				500147F01B902CE7007D2F1F /* LazyProperty.swift in Sources */,
+				500147F61B902DBB007D2F1F /* LayoutMaker.swift in Sources */,
+				500147F91B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
+				500147FC1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
+				50073FB21B844EED0082BCC3 /* Layoutable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */,
+				500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
+				500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
 				50073FA71B844EC10082BCC3 /* SquarePantsTests.swift in Sources */,
+				500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */,
+				50073FB31B844EED0082BCC3 /* Layoutable.swift in Sources */,
+				500147F41B902D2A007D2F1F /* PropertySetter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +344,7 @@
 		50073FAC1B844EC10082BCC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +355,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		50073FAD1B844EC10082BCC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -375,6 +415,7 @@
 				50073FAD1B844EC10082BCC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50073FAE1B844EC10082BCC3 /* Build configuration list for PBXNativeTarget "SquarePantsTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +424,7 @@
 				50073FB01B844EC10082BCC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

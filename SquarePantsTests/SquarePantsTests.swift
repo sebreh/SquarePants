@@ -7,30 +7,31 @@
 //
 
 import XCTest
-@testable import SquarePants
 
 class SquarePantsTests: XCTestCase {
+  
+  func testExample() {
+    let container = UIView()
+    container.frame = CGRectMake(0, 0, 100, 100)
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    let view = UIView()
+    view.frame = CGRectMake(0, 0, 40, 40)
+    container.addSubview(view)
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+    let frame = view.sp_superview.frame.withInset(10)
+    print("Frame: \(frame.value)")
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    let label = UILabel()
+    label.text = "This is some text"
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
+    label.sp_makeLayout { make in
+      make.size.fitContent().when(true)
+      make.center.equal(view.sp_superview.center)
+    }.apply()
     
+    view.sp_makeLayout { make in
+      make.frame.equal(view.sp_superview.frame.withInset(10))
+      make.size.fitContent()
+    }.apply()
+  }
 }
