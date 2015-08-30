@@ -56,9 +56,25 @@ extension LayoutMaker {
       })
   }
   
+  var width: LayoutRelationship<CGFloat> {
+    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, width: CGFloat) in
+      var frame = view.frame
+      frame.size.width = width
+      view.frame = frame
+    })
+  }
+  
+  var height: LayoutRelationship<CGFloat> {
+    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, height: CGFloat) in
+      var frame = view.frame
+      frame.size.height = height
+      view.frame = frame
+    })
+  }
+  
   var alpha: LayoutRelationship<CGFloat> {
     return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, alpha: CGFloat) in
       view.alpha = alpha
-      })
+    })
   }
 }

@@ -16,21 +16,47 @@ extension UIView {
     }
   }
   
-  var sp_frame: LazyProperty<CGRect> {
+  var sp_frame: LazyProperty<CGRect?> {
     return LazyProperty() { [weak self] in
-      return self?.frame ?? CGRectZero
+      return self?.frame
     }
   }
   
-  var sp_bounds: LazyProperty<CGRect> {
+  var sp_width: LazyProperty<CGFloat?> {
     return LazyProperty() { [weak self] in
-      return self?.bounds ?? CGRectZero
+      if let bounds = self?.bounds {
+        return CGRectGetWidth(bounds)
+      } else {
+        return nil
+      }
     }
   }
   
-  func sp_fittedSize(maxSize  maxSize: CGSize = CGSize(width: CGFloat.max, height: CGFloat.max)) -> LazyProperty<CGSize> {
+  var sp_height: LazyProperty<CGFloat?> {
     return LazyProperty() { [weak self] in
-      return self?.sizeThatFits(maxSize) ?? CGSizeZero
+      if let bounds = self?.bounds {
+        return CGRectGetHeight(bounds)
+      } else {
+        return nil
+      }
+    }
+  }
+  
+  var sp_bounds: LazyProperty<CGRect?> {
+    return LazyProperty() { [weak self] in
+      return self?.bounds
+    }
+  }
+  
+  var sp_transform: LazyProperty<CGAffineTransform?> {
+    return LazyProperty() { [weak self] in
+      return self?.transform
+    }
+  }
+  
+  func sp_fittedSize(maxSize  maxSize: CGSize = CGSize(width: CGFloat.max, height: CGFloat.max)) -> LazyProperty<CGSize?> {
+    return LazyProperty() { [weak self] in
+      return self?.sizeThatFits(maxSize)
     }
   }
   

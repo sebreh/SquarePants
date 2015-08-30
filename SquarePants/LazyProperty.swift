@@ -38,15 +38,15 @@ extension LazyValue where ValueType == UIView? {
     }
   }
   
-  var frame: LazyProperty<CGRect> {
+  var frame: LazyProperty<CGRect?> {
     return LazyProperty() {
-      return self.value?.frame ?? CGRectZero
+      return self.value?.frame
     }
   }
   
-  var center: LazyProperty<CGPoint> {
+  var center: LazyProperty<CGPoint?> {
     return LazyProperty() {
-      return self.value?.center ?? CGPointZero
+      return self.value?.center
     }
   }
 }
@@ -63,6 +63,30 @@ extension LazyValue where ValueType == CGRect {
     return LazyProperty() {
       let insets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
       return UIEdgeInsetsInsetRect(self.value, insets)
+    }
+  }
+}
+
+extension LazyValue where ValueType == CGRect? {
+  
+  func withInsets(insets: UIEdgeInsets) -> LazyProperty<CGRect?> {
+    return LazyProperty() {
+      if let rect = self.value {
+        return UIEdgeInsetsInsetRect(rect, insets)
+      } else {
+        return nil
+      }
+    }
+  }
+  
+  func withInset(inset: CGFloat) -> LazyProperty<CGRect?> {
+    return LazyProperty() {
+      if let rect = self.value {
+        let insets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+        return UIEdgeInsetsInsetRect(rect, insets)
+      } else {
+        return nil
+      }
     }
   }
 }

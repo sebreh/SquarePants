@@ -30,6 +30,7 @@ class SquarePantsTests: XCTestCase {
     }.apply()
     
     view.sp_makeLayout { make in
+      make.width.equal(label.sp_height)
       make.frame.equal(view.sp_superview.frame.withInset(10))
       make.size.fitContent()
     }.apply()
