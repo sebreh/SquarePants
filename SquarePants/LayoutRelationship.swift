@@ -14,6 +14,9 @@ protocol Relationship {
   var setter: PropertySetter<ValueType> { get }
   var lazyValue: LazyProperty<ValueType>? { get }
   var condition: Bool { get }
+
+  func equal(value: ValueType) -> Self
+  func equal(value: ValueType?) -> Self
   
   func equal(value: LazyProperty<ValueType>?) -> Self
   func equal(value: LazyProperty<ValueType?>) -> Self
@@ -30,6 +33,22 @@ class LayoutRelationship<T>: Relationship, Layoutable {
   
   init(setter: PropertySetter<T>) {
     self.setter = setter
+  }
+  
+  func equal(value: ValueType) -> Self {
+    self.lazyValue = LazyProperty {
+      return value
+    }
+    
+    return self
+  }
+
+  func equal(value: ValueType?) -> Self {
+    self.optionalLazyValue = LazyProperty {
+      return value
+    }
+    
+    return self
   }
   
   func equal(value: LazyProperty<T>?) -> Self {

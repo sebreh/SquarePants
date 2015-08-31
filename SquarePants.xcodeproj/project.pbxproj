@@ -26,6 +26,7 @@
 		50124B991B93A3550049FBF8 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B941B93A3430049FBF8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50124B9A1B93A3550049FBF8 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		50124B941B93A3430049FBF8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		50124B951B93A3430049FBF8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsSpec.swift; sourceTree = "<group>"; };
+		50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutRelationshipSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				50073FA81B844EC10082BCC3 /* Info.plist */,
 				50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */,
+				50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */,
 			);
 			path = SquarePantsTests;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */,
 				50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */,
+				50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */,
 				500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
 				500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
 				500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */,
