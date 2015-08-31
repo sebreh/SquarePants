@@ -28,41 +28,50 @@ struct LazyProperty<T>: LazyValue {
   }
 }
 
+extension LazyValue {
+
+  func map<U>(transform: ValueType -> U) -> LazyProperty<U> {
+    return LazyProperty<U> {
+      return transform(self.value)
+    }
+  }
+}
+
 // MARK: Extensions
 
 extension LazyValue where ValueType == UIView? {
   
   var superview: LazyProperty<UIView?> {
-    return LazyProperty() {
-      return self.value?.superview
-    }
+    return map { $0?.superview }
   }
   
   var frame: LazyProperty<CGRect?> {
-    return LazyProperty() {
-      return self.value?.frame
-    }
+    return map { $0?.frame }
   }
   
   var center: LazyProperty<CGPoint?> {
-    return LazyProperty() {
-      return self.value?.center
-    }
+    return map { $0?.center }
+  }
+  
+  var alpha: LazyProperty<CGFloat?> {
+    return map { $0?.alpha }
+  }
+  
+  var transform: LazyProperty<CGAffineTransform?> {
+    return map { $0?.transform }
   }
 }
 
 extension LazyValue where ValueType == CGRect {
   
   func withInsets(insets: UIEdgeInsets) -> LazyProperty<CGRect> {
-    return LazyProperty() {
-      return UIEdgeInsetsInsetRect(self.value, insets)
-    }
+    return map { UIEdgeInsetsInsetRect($0, insets) }
   }
   
   func withInset(inset: CGFloat) -> LazyProperty<CGRect> {
-    return LazyProperty() {
+    return map { rect in
       let insets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
-      return UIEdgeInsetsInsetRect(self.value, insets)
+      return UIEdgeInsetsInsetRect(rect, insets)
     }
   }
 }
@@ -70,8 +79,8 @@ extension LazyValue where ValueType == CGRect {
 extension LazyValue where ValueType == CGRect? {
   
   func withInsets(insets: UIEdgeInsets) -> LazyProperty<CGRect?> {
-    return LazyProperty() {
-      if let rect = self.value {
+    return map { rect in
+      if let rect = rect {
         return UIEdgeInsetsInsetRect(rect, insets)
       } else {
         return nil
@@ -80,8 +89,8 @@ extension LazyValue where ValueType == CGRect? {
   }
   
   func withInset(inset: CGFloat) -> LazyProperty<CGRect?> {
-    return LazyProperty() {
-      if let rect = self.value {
+    return map { rect in
+      if let rect = rect {
         let insets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
         return UIEdgeInsetsInsetRect(rect, insets)
       } else {
