@@ -19,9 +19,13 @@
 		500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		50073F9B1B844EC10082BCC3 /* SquarePants.h in Headers */ = {isa = PBXBuildFile; fileRef = 50073F9A1B844EC10082BCC3 /* SquarePants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50073FA21B844EC10082BCC3 /* SquarePants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50073F971B844EC10082BCC3 /* SquarePants.framework */; };
-		50073FA71B844EC10082BCC3 /* SquarePantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FA61B844EC10082BCC3 /* SquarePantsTests.swift */; };
 		50073FB21B844EED0082BCC3 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FB11B844EEC0082BCC3 /* Layoutable.swift */; };
 		50073FB31B844EED0082BCC3 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FB11B844EEC0082BCC3 /* Layoutable.swift */; };
+		50124B961B93A3430049FBF8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50124B941B93A3430049FBF8 /* Nimble.framework */; };
+		50124B971B93A3430049FBF8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; };
+		50124B991B93A3550049FBF8 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B941B93A3430049FBF8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50124B9A1B93A3550049FBF8 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50124B981B93A34C0049FBF8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50124B991B93A3550049FBF8 /* Nimble.framework in CopyFiles */,
+				50124B9A1B93A3550049FBF8 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		500147EF1B902CE7007D2F1F /* LazyProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyProperty.swift; sourceTree = "<group>"; };
 		500147F21B902D2A007D2F1F /* PropertySetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySetter.swift; sourceTree = "<group>"; };
@@ -44,9 +62,11 @@
 		50073F9A1B844EC10082BCC3 /* SquarePants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquarePants.h; sourceTree = "<group>"; };
 		50073F9C1B844EC10082BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50073FA11B844EC10082BCC3 /* SquarePantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquarePantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50073FA61B844EC10082BCC3 /* SquarePantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquarePantsTests.swift; sourceTree = "<group>"; };
 		50073FA81B844EC10082BCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50073FB11B844EEC0082BCC3 /* Layoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
+		50124B941B93A3430049FBF8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		50124B951B93A3430049FBF8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50124B961B93A3430049FBF8 /* Nimble.framework in Frameworks */,
+				50124B971B93A3430049FBF8 /* Quick.framework in Frameworks */,
 				50073FA21B844EC10082BCC3 /* SquarePants.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +93,8 @@
 		50073F8D1B844EC10082BCC3 = {
 			isa = PBXGroup;
 			children = (
+				50124B941B93A3430049FBF8 /* Nimble.framework */,
+				50124B951B93A3430049FBF8 /* Quick.framework */,
 				50073F991B844EC10082BCC3 /* SquarePants */,
 				50073FA51B844EC10082BCC3 /* SquarePantsTests */,
 				50073F981B844EC10082BCC3 /* Products */,
@@ -104,8 +128,8 @@
 		50073FA51B844EC10082BCC3 /* SquarePantsTests */ = {
 			isa = PBXGroup;
 			children = (
-				50073FA61B844EC10082BCC3 /* SquarePantsTests.swift */,
 				50073FA81B844EC10082BCC3 /* Info.plist */,
+				50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */,
 			);
 			path = SquarePantsTests;
 			sourceTree = "<group>";
@@ -149,6 +173,7 @@
 				50073F9D1B844EC10082BCC3 /* Sources */,
 				50073F9E1B844EC10082BCC3 /* Frameworks */,
 				50073F9F1B844EC10082BCC3 /* Resources */,
+				50124B981B93A34C0049FBF8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -232,9 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */,
+				50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */,
 				500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
 				500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
-				50073FA71B844EC10082BCC3 /* SquarePantsTests.swift in Sources */,
 				500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */,
 				50073FB31B844EED0082BCC3 /* Layoutable.swift in Sources */,
 				500147F41B902D2A007D2F1F /* PropertySetter.swift in Sources */,
@@ -379,6 +404,10 @@
 		50073FAF1B844EC10082BCC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SquarePantsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePantsTests;
@@ -389,6 +418,10 @@
 		50073FB01B844EC10082BCC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SquarePantsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePantsTests;

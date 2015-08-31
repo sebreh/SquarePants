@@ -41,11 +41,6 @@ Pods/*
 
 # Carthage
 Carthage/*
-Carthage/*/
-!Carthage/Build
-Carthage/Build/*
-Carthage/Build/*/
-!Carthage/Build/iOS
 
 # Profiles and Certs
 *.mobileprovision
