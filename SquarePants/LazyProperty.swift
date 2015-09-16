@@ -35,6 +35,12 @@ extension LazyValue {
       return transform(self.value)
     }
   }
+  
+  func flatMap<U>(transform: ValueType -> LazyProperty<U?>?) -> LazyProperty<U?> {
+    return LazyProperty<U?> {
+      return transform(self.value)?.value
+    }
+  }
 }
 
 // MARK: Extensions
@@ -51,6 +57,10 @@ extension LazyValue where ValueType == UIView? {
   
   var center: LazyProperty<CGPoint?> {
     return map { $0?.center }
+  }
+  
+  var sp_contentCenter: LazyProperty<CGPoint?> {
+    return flatMap { $0?.sp_contentCenter }
   }
   
   var alpha: LazyProperty<CGFloat?> {

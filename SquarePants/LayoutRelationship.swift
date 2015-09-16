@@ -31,7 +31,7 @@ class LayoutRelationship<T>: Relationship, Layoutable {
   var optionalLazyValue: LazyProperty<T?>?
   var condition: Bool = true
   
-  init(setter: PropertySetter<T>) {
+  init(_ setter: PropertySetter<T>) {
     self.setter = setter
   }
   
@@ -92,5 +92,12 @@ extension Relationship where ValueType == CGSize {
   
   func fitContent(maxSize: CGSize = CGSize(width: CGFloat.max, height: CGFloat.max)) -> Self {
     return equal(setter.view.sp_fittedSize(maxSize: maxSize))
+  }
+}
+
+extension Relationship where ValueType == CGPoint {
+  
+  func centerInSuperview() -> Self {
+    return equal(setter.view.sp_superview.sp_contentCenter)
   }
 }

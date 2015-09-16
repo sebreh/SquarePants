@@ -18,8 +18,8 @@ class LayoutMaker: Layoutable {
     self.view = view
   }
   
-  private func addRelationshipWithSetter<T>(setter: PropertySetter<T>) -> LayoutRelationship<T> {
-    let relationship = LayoutRelationship(setter: setter)
+  func addRelationshipWithSetter<T>(setter: PropertySetter<T>) -> LayoutRelationship<T> {
+    let relationship = LayoutRelationship(setter)
     layoutables.append(relationship)
     
     return relationship
@@ -37,44 +37,34 @@ class LayoutMaker: Layoutable {
 extension LayoutMaker {
   
   var center: LayoutRelationship<CGPoint> {
-    return addRelationshipWithSetter(PropertySetter(view) { view, center in
-      view.center = center
-      })
+    return addRelationshipWithSetter(view.sp_centerSetter)
   }
   
   var size: LayoutRelationship<CGSize> {
-    return addRelationshipWithSetter(PropertySetter(view) { view, size in
-      var frame = view.frame
-      frame.size = size
-      view.frame = frame
-      })
+    return addRelationshipWithSetter(view.sp_sizeSetter)
   }
   
   var frame: LayoutRelationship<CGRect> {
-    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, frame: CGRect) in
-      view.frame = frame
-      })
+    return addRelationshipWithSetter(view.sp_frameSetter)
+  }
+
+  var x: LayoutRelationship<CGFloat> {
+    return addRelationshipWithSetter(view.sp_xSetter)
+  }
+  
+  var y: LayoutRelationship<CGFloat> {
+    return addRelationshipWithSetter(view.sp_ySetter)
   }
   
   var width: LayoutRelationship<CGFloat> {
-    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, width: CGFloat) in
-      var frame = view.frame
-      frame.size.width = width
-      view.frame = frame
-    })
+    return addRelationshipWithSetter(view.sp_widthSetter)
   }
   
   var height: LayoutRelationship<CGFloat> {
-    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, height: CGFloat) in
-      var frame = view.frame
-      frame.size.height = height
-      view.frame = frame
-    })
+    return addRelationshipWithSetter(view.sp_heightSetter)
   }
   
   var alpha: LayoutRelationship<CGFloat> {
-    return addRelationshipWithSetter(PropertySetter(view) { (view: UIView, alpha: CGFloat) in
-      view.alpha = alpha
-    })
+    return addRelationshipWithSetter(view.sp_alphaSetter)
   }
 }

@@ -12,7 +12,7 @@ class LayoutRelationshipSpec: QuickSpec {
           let view = UIView()
           let frame = CGRectMake(20, 20, 100, 100)
           
-          LayoutRelationship<CGRect>(setter: PropertySetter(view) { view, frame in
+          LayoutRelationship<CGRect>(PropertySetter(view) { view, frame in
             view.frame = frame
           }).equal(frame).apply()
           
@@ -26,7 +26,7 @@ class LayoutRelationshipSpec: QuickSpec {
           let view = UIView()
           let frame = CGRectMake(20, 20, 100, 100)
           
-          LayoutRelationship<CGRect>(setter: PropertySetter(view) { view, frame in
+          LayoutRelationship<CGRect>(PropertySetter(view) { view, frame in
             view.frame = frame
           }).equal(frame).when(true).apply()
           
@@ -40,7 +40,7 @@ class LayoutRelationshipSpec: QuickSpec {
           let view = UIView()
           let frame = CGRectMake(20, 20, 100, 100)
           
-          LayoutRelationship<CGRect>(setter: PropertySetter(view) { view, frame in
+          LayoutRelationship<CGRect>(PropertySetter(view) { view, frame in
             view.frame = frame
           }).equal(frame).when(false).apply()
           
@@ -53,11 +53,24 @@ class LayoutRelationshipSpec: QuickSpec {
         it("should not set value") {
           let view = UIView()
           
-          LayoutRelationship<CGRect>(setter: PropertySetter(view) { view, frame in
+          LayoutRelationship<CGRect>(PropertySetter(view) { view, frame in
             view.frame = frame
           }).apply()
           
           expect(view.frame) == CGRectZero
+        }
+      }
+      
+      describe("when centering in superview") {
+      
+        it("should center the view in its superview") {
+          let superview = UIView(frame: CGRectMake(0, 0, 100, 200))
+          let view = UIView(frame: CGRectMake(0, 0, 10, 10))
+          superview.addSubview(view)
+          
+          LayoutRelationship(view.sp_centerSetter).centerInSuperview().apply()
+          
+          expect(view.center).to(equal(CGPointMake(50, 100)))
         }
       }
     }
