@@ -24,7 +24,7 @@ Example usage:
 let layout = view.sp_makeLayout { make in
   make.size.fitContent()
   make.y.equal(20)
-  make.center.matchSuperview(axis: .Vertical)
+  make.center.centerInSuperview(axis: .Vertical)
   make.alpha.equal(0.4)
 }
 
