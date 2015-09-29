@@ -28,7 +28,7 @@ let layout = view.sp_makeLayout { make in
   make.alpha.equal(0.4)
 }
 
-// Apply the layout. The resulting values will not be evaluated until apply() is called
+// Apply the layout
 layout.apply()
 
 // Alternatively, apply the layout immediately by calling sp_layout(_)
