@@ -6,7 +6,7 @@
 //  Copyright © 2015 Peakon. All rights reserved.
 //
 
-protocol Layoutable {
+public protocol Layoutable {
   
   func apply()
 }

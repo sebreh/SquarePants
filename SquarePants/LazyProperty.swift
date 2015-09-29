@@ -8,16 +8,16 @@
 
 import UIKit
 
-protocol LazyValue {
+public protocol LazyPropertyType {
   typealias ValueType
   
   var value: ValueType { get }
 }
 
-struct LazyProperty<T>: LazyValue {
-  typealias ValueType = T
+public struct LazyProperty<T>: LazyPropertyType {
+  public typealias ValueType = T
   
-  var value: T {
+  public var value: T {
     return evaluate()
   }
   
@@ -28,7 +28,7 @@ struct LazyProperty<T>: LazyValue {
   }
 }
 
-extension LazyValue {
+public extension LazyPropertyType {
 
   func map<U>(transform: ValueType -> U) -> LazyProperty<U> {
     return LazyProperty<U> {
@@ -45,7 +45,7 @@ extension LazyValue {
 
 // MARK: Extensions
 
-extension LazyValue where ValueType == UIView? {
+public extension LazyPropertyType where ValueType == UIView? {
   
   var superview: LazyProperty<UIView?> {
     return map { $0?.superview }
@@ -72,7 +72,7 @@ extension LazyValue where ValueType == UIView? {
   }
 }
 
-extension LazyValue where ValueType == CGRect {
+public extension LazyPropertyType where ValueType == CGRect {
   
   func withInsets(insets: UIEdgeInsets) -> LazyProperty<CGRect> {
     return map { UIEdgeInsetsInsetRect($0, insets) }
@@ -86,7 +86,7 @@ extension LazyValue where ValueType == CGRect {
   }
 }
 
-extension LazyValue where ValueType == CGRect? {
+public extension LazyPropertyType where ValueType == CGRect? {
   
   func withInsets(insets: UIEdgeInsets) -> LazyProperty<CGRect?> {
     return map { rect in

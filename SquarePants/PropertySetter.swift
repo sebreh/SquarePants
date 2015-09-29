@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PropertySetter<T> {
+public struct PropertySetter<T> {
   
   weak var view: UIView!
   var setBlock: (UIView, T) -> ()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
   
   var sp_superview: LazyProperty<UIView?> {
     return LazyProperty() { [weak self] in
@@ -76,10 +76,17 @@ extension UIView {
     
     return maker
   }
+  
+  func sp_layout(make: (make: LayoutMaker) -> ()) {
+    let maker = LayoutMaker(view: self)
+    make(make: maker)
+    
+    maker.apply()
+  }
 }
 
 
-extension UIView {
+public extension UIView {
   
   var sp_centerSetter: PropertySetter<CGPoint> {
     return PropertySetter(self) { view, center in

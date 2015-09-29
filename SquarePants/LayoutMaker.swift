@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LayoutMaker: Layoutable {
+public class LayoutMaker: Layoutable {
   
   weak var view: UIView!
   
@@ -25,7 +25,7 @@ class LayoutMaker: Layoutable {
     return relationship
   }
   
-  func apply() {
+  public func apply() {
     for layoutable in layoutables {
       layoutable.apply()
     }
@@ -34,7 +34,7 @@ class LayoutMaker: Layoutable {
 
 // MARK: Extensions
 
-extension LayoutMaker {
+public extension LayoutMaker {
   
   var center: LayoutRelationship<CGPoint> {
     return addRelationshipWithSetter(view.sp_centerSetter)
