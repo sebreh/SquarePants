@@ -1,15 +1,15 @@
 # SquarePants
 
 ## Introduction
-SquarePants is a yet another library to define layouts on iOS. It is different than most others in a few ways:
+SquarePants is yet another library to do layout on iOS. It is different than most others in a few ways:
 
+- It calculates resulting layout values lazily.
 - It decouples layout from the view itself, until the moment where the layout is applied.
-- It calculates resulting layout values lazily on-demand.
 - It takes advantage of Swift 2 protocol extensions to provide a flexible API.
 
 ## Installation
 
-It is recommended you use Carthage to install SquarePants. Simply add the following to your `Cartfile`:
+It is recommended you use [Carthage](https://github.com/Carthage/Carthage) to install SquarePants. Simply add the following to your `Cartfile`:
 
 ```ruby
 github "sebreh/SquarePants" "master"
@@ -17,7 +17,7 @@ github "sebreh/SquarePants" "master"
 
 ## Usage
 
-Example usage:
+The basics of using SquarePants:
 
 ```swift
 // Create a layout
