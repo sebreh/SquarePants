@@ -3,7 +3,7 @@
 //  SquarePants
 //
 //  Created by Sebastian Rehnby on 29/09/15.
-//  Copyright © 2015 Peakon. All rights reserved.
+//  Copyright © 2015 Sebastian Rehnby. All rights reserved.
 //
 
 public struct LayoutAxis: OptionSetType {

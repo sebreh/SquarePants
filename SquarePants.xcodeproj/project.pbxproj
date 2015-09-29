@@ -209,7 +209,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Peakon;
+				ORGANIZATIONNAME = "Sebastian Rehnby";
 				TargetAttributes = {
 					50073F961B844EC10082BCC3 = {
 						CreatedOnToolsVersion = 7.0;
@@ -399,7 +399,7 @@
 				INFOPLIST_FILE = SquarePants/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePants;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebreh.SquarePants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -417,7 +417,7 @@
 				INFOPLIST_FILE = SquarePants/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePants;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebreh.SquarePants;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -432,7 +432,7 @@
 				);
 				INFOPLIST_FILE = SquarePantsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePantsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebreh.SquarePantsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -446,7 +446,7 @@
 				);
 				INFOPLIST_FILE = SquarePantsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.peakon.SquarePantsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sebreh.SquarePantsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
