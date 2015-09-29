@@ -48,6 +48,12 @@ public extension UIView {
     }
   }
   
+  var sp_center: LazyProperty<CGPoint?> {
+    return LazyProperty() { [weak self] in
+      return self?.center
+    }
+  }
+  
   var sp_contentCenter: LazyProperty<CGPoint?> {
     return sp_bounds.map { bounds in
       if let bounds = bounds {

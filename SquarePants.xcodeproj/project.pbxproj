@@ -27,6 +27,8 @@
 		50124B9A1B93A3550049FBF8 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		50786DBC1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; settings = {ASSET_TAGS = (); }; };
+		50786DBD1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; settings = {ASSET_TAGS = (); }; };
 		50B913A51BA89F6700B26033 /* LazyPropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A41BA89F6700B26033 /* LazyPropertySpec.swift */; settings = {ASSET_TAGS = (); }; };
 		50B913A71BA8A03D00B26033 /* PropertySetterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A61BA8A03D00B26033 /* PropertySetterSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		50B913A91BA8A10800B26033 /* LayoutMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A81BA8A10800B26033 /* LayoutMakerSpec.swift */; settings = {ASSET_TAGS = (); }; };
@@ -72,6 +74,7 @@
 		50124B951B93A3430049FBF8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsSpec.swift; sourceTree = "<group>"; };
 		50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutRelationshipSpec.swift; sourceTree = "<group>"; };
+		50786DBB1BBB345B00E9504F /* LayoutAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAxis.swift; sourceTree = "<group>"; };
 		50B913A41BA89F6700B26033 /* LazyPropertySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyPropertySpec.swift; sourceTree = "<group>"; };
 		50B913A61BA8A03D00B26033 /* PropertySetterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertySetterSpec.swift; sourceTree = "<group>"; };
 		50B913A81BA8A10800B26033 /* LayoutMakerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMakerSpec.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				500147F51B902DBB007D2F1F /* LayoutMaker.swift */,
 				500147F81B902DFC007D2F1F /* LayoutRelationship.swift */,
 				500147FB1B902E53007D2F1F /* UIViewExtensions.swift */,
+				50786DBB1BBB345B00E9504F /* LayoutAxis.swift */,
 			);
 			path = SquarePants;
 			sourceTree = "<group>";
@@ -260,6 +264,7 @@
 				500147F61B902DBB007D2F1F /* LayoutMaker.swift in Sources */,
 				500147F91B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
 				500147FC1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
+				50786DBC1BBB345B00E9504F /* LayoutAxis.swift in Sources */,
 				50073FB21B844EED0082BCC3 /* Layoutable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +279,7 @@
 				50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */,
 				50B913A91BA8A10800B26033 /* LayoutMakerSpec.swift in Sources */,
 				500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */,
+				50786DBD1BBB345B00E9504F /* LayoutAxis.swift in Sources */,
 				50B913A51BA89F6700B26033 /* LazyPropertySpec.swift in Sources */,
 				500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */,
 				500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */,

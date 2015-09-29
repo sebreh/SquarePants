@@ -95,7 +95,20 @@ public extension LayoutRelationshipType where ValueType == CGSize {
 
 public extension LayoutRelationshipType where ValueType == CGPoint {
   
-  func centerInSuperview() -> Self {
-    return equal(setter.view.sp_superview.sp_contentCenter)
+  func centerInSuperview(axis axis: LayoutAxis = .All) -> Self {
+    let center = setter.view.sp_center
+    
+    return equal(setter.view.sp_superview.sp_contentCenter.map { superviewCenter -> CGPoint? in
+      guard let centerValue = center.value,
+            let superviewCenterValue = superviewCenter else { return nil }
+      
+      if axis == .Vertical {
+        return CGPoint(x: centerValue.x, y: superviewCenterValue.y)
+      } else if axis == .Horizontal {
+        return CGPoint(x: superviewCenterValue.x, y: centerValue.y)
+      } else {
+        return superviewCenter
+      }
+    })
   }
 }
