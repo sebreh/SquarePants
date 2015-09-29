@@ -1,7 +1,7 @@
 # SquarePants
 
 ## Introduction
-SquarePants is yet another library to do layout on iOS. It is different than most others in a few ways:
+SquarePants is yet another library to do layout on iOS. The goal of SquarePants is to make it easy to create more complex layouts and transitions using it. It is different than most others in a few ways:
 
 - It calculates resulting layout values lazily.
 - It decouples layout from the view itself, until the moment where the layout is applied.
