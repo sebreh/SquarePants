@@ -23,14 +23,14 @@ Example usage:
 // Create a layout
 let layout = view.sp_makeLayout { make in
   make.size.fitContent()
-	make.y.equal(20)
-	make.center.matchSuperview(axis: .Vertical)
+  make.y.equal(20)
+  make.center.matchSuperview(axis: .Vertical)
   make.alpha.equal(0.4)
 }
 
 // Apply the layout. The resulting values will not be evaluated until apply() is called
 layout.apply()
 
-// Alternatively, apply the layout immediately by:
+// Alternatively, apply the layout immediately by calling sp_layout(_)
 view.sp_layout { $0.size.fitContent() }
 ```
