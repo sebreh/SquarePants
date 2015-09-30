@@ -34,3 +34,7 @@ layout.apply()
 // Alternatively, apply the layout immediately by calling sp_layout(_)
 view.sp_layout { $0.size.fitContent() }
 ```
+
+## Credits
+
+SquarePants API has been inspired by [SnapKit](https://github.com/snapkit/snapkit), a great library for working with AutoLayout.
