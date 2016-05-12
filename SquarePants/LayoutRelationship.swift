@@ -9,7 +9,7 @@
 import CoreGraphics
 
 public protocol LayoutRelationshipType {
-  typealias ValueType
+  associatedtype ValueType
   
   var setter: PropertySetter<ValueType> { get }
 

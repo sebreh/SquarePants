@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol LazyPropertyType {
-  typealias ValueType
+  associatedtype ValueType
   
   var value: ValueType { get }
 }
