@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500147F01B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F31B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F41B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F61B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; settings = {ASSET_TAGS = (); }; };
-		500147F91B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; settings = {ASSET_TAGS = (); }; };
-		500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; settings = {ASSET_TAGS = (); }; };
-		500147FC1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
-		500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		500147F01B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; };
+		500147F11B902CE7007D2F1F /* LazyProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147EF1B902CE7007D2F1F /* LazyProperty.swift */; };
+		500147F31B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; };
+		500147F41B902D2A007D2F1F /* PropertySetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F21B902D2A007D2F1F /* PropertySetter.swift */; };
+		500147F61B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; };
+		500147F71B902DBB007D2F1F /* LayoutMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F51B902DBB007D2F1F /* LayoutMaker.swift */; };
+		500147F91B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; };
+		500147FA1B902DFC007D2F1F /* LayoutRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147F81B902DFC007D2F1F /* LayoutRelationship.swift */; };
+		500147FC1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; };
+		500147FD1B902E53007D2F1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500147FB1B902E53007D2F1F /* UIViewExtensions.swift */; };
 		50073F9B1B844EC10082BCC3 /* SquarePants.h in Headers */ = {isa = PBXBuildFile; fileRef = 50073F9A1B844EC10082BCC3 /* SquarePants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50073FA21B844EC10082BCC3 /* SquarePants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50073F971B844EC10082BCC3 /* SquarePants.framework */; };
 		50073FB21B844EED0082BCC3 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50073FB11B844EEC0082BCC3 /* Layoutable.swift */; };
@@ -25,13 +25,13 @@
 		50124B971B93A3430049FBF8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; };
 		50124B991B93A3550049FBF8 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B941B93A3430049FBF8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50124B9A1B93A3550049FBF8 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50124B951B93A3430049FBF8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		50786DBC1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; settings = {ASSET_TAGS = (); }; };
-		50786DBD1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; settings = {ASSET_TAGS = (); }; };
-		50B913A51BA89F6700B26033 /* LazyPropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A41BA89F6700B26033 /* LazyPropertySpec.swift */; settings = {ASSET_TAGS = (); }; };
-		50B913A71BA8A03D00B26033 /* PropertySetterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A61BA8A03D00B26033 /* PropertySetterSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		50B913A91BA8A10800B26033 /* LayoutMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A81BA8A10800B26033 /* LayoutMakerSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		50124B9C1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9B1B93A36C0049FBF8 /* UIViewExtensionsSpec.swift */; };
+		50124B9E1B9427E50049FBF8 /* LayoutRelationshipSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50124B9D1B9427E50049FBF8 /* LayoutRelationshipSpec.swift */; };
+		50786DBC1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; };
+		50786DBD1BBB345B00E9504F /* LayoutAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50786DBB1BBB345B00E9504F /* LayoutAxis.swift */; };
+		50B913A51BA89F6700B26033 /* LazyPropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A41BA89F6700B26033 /* LazyPropertySpec.swift */; };
+		50B913A71BA8A03D00B26033 /* PropertySetterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A61BA8A03D00B26033 /* PropertySetterSpec.swift */; };
+		50B913A91BA8A10800B26033 /* LayoutMakerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B913A81BA8A10800B26033 /* LayoutMakerSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,9 +213,11 @@
 				TargetAttributes = {
 					50073F961B844EC10082BCC3 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					50073FA01B844EC10082BCC3 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -341,6 +343,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -381,6 +384,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
