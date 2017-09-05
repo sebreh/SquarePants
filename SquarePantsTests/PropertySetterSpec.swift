@@ -7,7 +7,7 @@ class PropertySetterSpec: QuickSpec {
     describe("A property setter") {
     
       it("should execute the set block") {
-        let view = UIView(frame: CGRectZero)
+        let view = UIView(frame: CGRect.zero)
         let setter = PropertySetter<CGRect>(view) { view, frame in
           view.frame = frame
         }

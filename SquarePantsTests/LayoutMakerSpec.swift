@@ -26,7 +26,7 @@ class LayoutMakerSpec: QuickSpec {
         let view = UIView()
         let make = LayoutMaker(view: view)
         
-        let frame = CGRectMake(10, 10, 20, 20)
+        let frame = CGRect(x: 10, y: 10, width: 20, height: 20)
         make.frame.equal(frame).apply()
         
         expect(view.frame).to(equal(frame))

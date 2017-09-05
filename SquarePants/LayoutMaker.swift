@@ -8,24 +8,24 @@
 
 import UIKit
 
-public class LayoutMaker: Layoutable {
+open class LayoutMaker: Layoutable {
   
   weak var view: UIView!
   
-  private var layoutables = [Layoutable]()
+  fileprivate var layoutables = [Layoutable]()
   
   init(view: UIView) {
     self.view = view
   }
   
-  func addRelationshipWithSetter<T>(setter: PropertySetter<T>) -> LayoutRelationship<T> {
+  func addRelationshipWithSetter<T>(_ setter: PropertySetter<T>) -> LayoutRelationship<T> {
     let relationship = LayoutRelationship(setter)
     layoutables.append(relationship)
     
     return relationship
   }
   
-  public func apply() {
+  open func apply() {
     for layoutable in layoutables {
       layoutable.apply()
     }

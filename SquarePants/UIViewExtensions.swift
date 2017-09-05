@@ -25,7 +25,7 @@ public extension UIView {
   var sp_width: LazyProperty<CGFloat?> {
     return LazyProperty() { [weak self] in
       if let bounds = self?.bounds {
-        return CGRectGetWidth(bounds)
+        return bounds.width
       } else {
         return nil
       }
@@ -35,7 +35,7 @@ public extension UIView {
   var sp_height: LazyProperty<CGFloat?> {
     return LazyProperty() { [weak self] in
       if let bounds = self?.bounds {
-        return CGRectGetHeight(bounds)
+        return bounds.height
       } else {
         return nil
       }
@@ -57,7 +57,7 @@ public extension UIView {
   var sp_contentCenter: LazyProperty<CGPoint?> {
     return sp_bounds.map { bounds in
       if let bounds = bounds {
-        return CGPoint(x: CGRectGetWidth(bounds) / 2, y: CGRectGetHeight(bounds) / 2)
+        return CGPoint(x: bounds.width / 2, y: bounds.height / 2)
       } else {
         return nil
       }
@@ -70,22 +70,22 @@ public extension UIView {
     }
   }
   
-  func sp_fittedSize(maxSize  maxSize: CGSize = CGSize(width: CGFloat.max, height: CGFloat.max)) -> LazyProperty<CGSize?> {
+  func sp_fittedSize(maxSize: CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) -> LazyProperty<CGSize?> {
     return LazyProperty() { [weak self] in
       return self?.sizeThatFits(maxSize)
     }
   }
   
-  func sp_makeLayout(make: (make: LayoutMaker) -> ()) -> Layoutable {
+  func sp_makeLayout(_ make: (_ make: LayoutMaker) -> ()) -> Layoutable {
     let maker = LayoutMaker(view: self)
-    make(make: maker)
+    make(maker)
     
     return maker
   }
   
-  func sp_layout(make: (make: LayoutMaker) -> ()) {
+  func sp_layout(_ make: (_ make: LayoutMaker) -> ()) {
     let maker = LayoutMaker(view: self)
-    make(make: maker)
+    make(maker)
     
     maker.apply()
   }

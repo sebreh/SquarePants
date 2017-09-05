@@ -13,27 +13,27 @@ public protocol LayoutRelationshipType {
   
   var setter: PropertySetter<ValueType> { get }
 
-  func equal(value: ValueType) -> Self
-  func equal(value: ValueType?) -> Self
+  func equal(_ value: ValueType) -> Self
+  func equal(_ value: ValueType?) -> Self
   
-  func equal(value: LazyProperty<ValueType>?) -> Self
-  func equal(value: LazyProperty<ValueType?>) -> Self
-  func equal(value: LazyProperty<ValueType?>?) -> Self
+  func equal(_ value: LazyProperty<ValueType>?) -> Self
+  func equal(_ value: LazyProperty<ValueType?>) -> Self
+  func equal(_ value: LazyProperty<ValueType?>?) -> Self
 }
 
-public class LayoutRelationship<T>: LayoutRelationshipType, Layoutable {
+open class LayoutRelationship<T>: LayoutRelationshipType, Layoutable {
   public typealias ValueType = T
   
-  public let setter: PropertySetter<T>
-  public var lazyValue: LazyProperty<T>?
-  public var optionalLazyValue: LazyProperty<T?>?
-  public var condition: Bool = true
+  open let setter: PropertySetter<T>
+  open var lazyValue: LazyProperty<T>?
+  open var optionalLazyValue: LazyProperty<T?>?
+  open var condition: Bool = true
   
   public init(_ setter: PropertySetter<T>) {
     self.setter = setter
   }
   
-  public func equal(value: ValueType) -> Self {
+  open func equal(_ value: ValueType) -> Self {
     self.lazyValue = LazyProperty {
       return value
     }
@@ -41,7 +41,7 @@ public class LayoutRelationship<T>: LayoutRelationshipType, Layoutable {
     return self
   }
 
-  public func equal(value: ValueType?) -> Self {
+  open func equal(_ value: ValueType?) -> Self {
     self.optionalLazyValue = LazyProperty {
       return value
     }
@@ -49,31 +49,31 @@ public class LayoutRelationship<T>: LayoutRelationshipType, Layoutable {
     return self
   }
   
-  public func equal(value: LazyProperty<T>?) -> Self {
+  open func equal(_ value: LazyProperty<T>?) -> Self {
     self.lazyValue = value
     
     return self
   }
   
-  public func equal(value: LazyProperty<T?>) -> Self {
+  open func equal(_ value: LazyProperty<T?>) -> Self {
     self.optionalLazyValue = value
     
     return self
   }
   
-  public func equal(value: LazyProperty<T?>?) -> Self {
+  open func equal(_ value: LazyProperty<T?>?) -> Self {
     self.optionalLazyValue = value
     
     return self
   }
   
-  func when(condition: Bool) -> Self {
+  func when(_ condition: Bool) -> Self {
     self.condition = condition
     
     return self
   }
   
-  public func apply() {
+  open func apply() {
     guard condition else { return }
     
     if let lazyValue = lazyValue {
@@ -88,14 +88,14 @@ public class LayoutRelationship<T>: LayoutRelationshipType, Layoutable {
 
 public extension LayoutRelationshipType where ValueType == CGSize {
   
-  func fitContent(maxSize: CGSize = CGSize(width: CGFloat.max, height: CGFloat.max)) -> Self {
+  func fitContent(_ maxSize: CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)) -> Self {
     return equal(setter.view.sp_fittedSize(maxSize: maxSize))
   }
 }
 
 public extension LayoutRelationshipType where ValueType == CGPoint {
   
-  func centerInSuperview(axis axis: LayoutAxis = .All) -> Self {
+  func centerInSuperview(axis: LayoutAxis = .All) -> Self {
     let center = setter.view.sp_center
     
     return equal(setter.view.sp_superview.sp_contentCenter.map { superviewCenter -> CGPoint? in

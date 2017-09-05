@@ -13,11 +13,11 @@ public struct PropertySetter<T> {
   weak var view: UIView!
   var setBlock: (UIView, T) -> ()
   
-  func set(value: T) {
+  func set(_ value: T) {
     setBlock(view, value)
   }
   
-  init(_ view: UIView, setBlock: (UIView, T) -> ()) {
+  init(_ view: UIView, setBlock: @escaping (UIView, T) -> ()) {
     self.view = view
     self.setBlock = setBlock
   }

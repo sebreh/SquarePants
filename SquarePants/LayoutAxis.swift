@@ -6,7 +6,7 @@
 //  Copyright © 2015 Sebastian Rehnby. All rights reserved.
 //
 
-public struct LayoutAxis: OptionSetType {
+public struct LayoutAxis: OptionSet {
   public let rawValue: UInt
   public init(rawValue:UInt) { self.rawValue = rawValue }
   
